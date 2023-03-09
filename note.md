@@ -2,11 +2,17 @@
 
 ## Index
 
+[53. Maximum Subarray](#53)
+
 [217. Contains Duplicate](#217)
+
+[322. Coin Change](#322)
 
 [383. Ransom Note](#383)
 
 [412. Fizz Buzz](#412)
+
+[724. Find Pivot Index](#724)
 
 [876. Middle of the Linked List](#876)
 
@@ -15,6 +21,51 @@
 [1480. Running Sum of 1d Array](#1480)
 
 [1672. Richest Customer Wealth](#1672)
+
+### 53
+
+[Loading...](https://leetcode.com/problems/maximum-subarray/discuss/2540458/O(n)-solution)
+
+[Loading...](https://leetcode.com/problems/maximum-subarray/discuss/1354533/PYTHON-Divide-and-Conquer)
+
+[Loading...](https://leetcode.com/problems/maximum-subarray/discuss/1795358/Divide-and-Conqure)
+
+This problem is quite hard for me, I discussed about it on algorithm with a friend of mine.
+
+Our algorithm is based on 2 facts:
+
+- The MaxSubarray must have its leftmost and rightmost element positive.
+
+- If a positive element is in MaxSubarray, then its neighbor positive elements must be all included in MaxSubarray. Negative elements have the same nature.
+
+We define a recursive function `int MaxSubarray(int* array, int l, int r)`, in which `array` is the array in which we search MaxSubarray, this function returns the MaxSubarray sum in `array[l..r]`. We make use of the 2 facts above, try to reduce the size of array searched in each recursion layer, while ensuring in each layer it takes $O(1)$ time complexity (So that the full algorithm takes $O(n)$). The more detailed description of algorithm is in the code comments.
+
+The followings are elegant solutions by others:
+
+**Kadane's Algorithm** 
+
+Kadane's algorithm is based on DP. This algorithm can be used to solve the max sum of subarray. We take `dp[j]` as the max sum of subarray which ends at `A[j]` :
+
+$\text{dp}[j] = \max_{i\in[0..j-1]} (A[i]+A[i+1]+\dots+A[j]).$ 
+
+Then consider `dp[j+1]` , we have:
+
+$\text{dp}[j + 1] = A[j + 1] + \max\{\text{dp}[j],\ 0\}.$
+
+$\max_j \text{dp}[j]$ is the solution.
+
+Algorithm:
+
+```c
+int ans = 0; int cur = 0;
+for(i = 0; i < A.length; i++){
+    cur = A[i] + max(cur, 0);    // cur is dp[i]
+    ans = max(ans, cur);    // max dp[j] among all j-s
+}
+return ans;
+```
+
+**Divide and Conquer**
 
 ### 217
 
@@ -40,6 +91,10 @@ C built-in func: `void qsort(void* ptr, size_t count, size_t size. int(*comp)(co
 
 Sorts the given array pointed to by `ptr` in ascending order. The array contains `count` elements of `size` bytes. Function pointed to by `comp` is used for object comparison.
 
+### 322
+
+Simple DP.
+
 ### 383
 
 I just fell again on this: Remember, always use `while(*ptr)` instead of `while(ptr)`when iterating over a string. 
@@ -51,6 +106,12 @@ I just fell again on this: Remember, always use `while(*ptr)` instead of `while(
 `sprintf` in C: can convert numbers (int, float, ...) to string in formatted way.
 
 Use a hash table may be a way to get rid of if-else structure. But in C it's hard to impl.
+
+### 724
+
+Take the sum (O(n))
+
+then use a pointer to traverse the array, compare the sum of leftside  (RunningSum) and rightside (Sum - RunningSum - pivot).
 
 ### 876
 
