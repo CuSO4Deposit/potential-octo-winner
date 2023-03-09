@@ -4,6 +4,8 @@
 
 [53. Maximum Subarray](#53)
 
+[205. Isomorphic Strings](#205)
+
 [217. Contains Duplicate](#217)
 
 [322. Coin Change](#322)
@@ -66,6 +68,16 @@ return ans;
 ```
 
 **Divide and Conquer**
+
+### 205
+
+hashmap.
+
+1. No two characters may map to the same character.
+
+2. No one character may map to two characters.
+
+Characters must form a one-to-one mapping. The simplest thought is to take 2 arrays to record the two maps (s -> t and t -> s).
 
 ### 217
 
