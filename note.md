@@ -12,6 +12,8 @@
 
 [383. Ransom Note](#383)
 
+[392. Is Subsequence](#392)
+
 [412. Fizz Buzz](#412)
 
 [724. Find Pivot Index](#724)
@@ -112,6 +114,12 @@ Simple DP.
 I just fell again on this: Remember, always use `while(*ptr)` instead of `while(ptr)`when iterating over a string. 
 
 `char` cast to `int` : `*ptr - 'a'`may be better than `(int)*ptr - 95`.
+
+### 392
+
+Try to imitate the `strcpy()` func style(x).
+
+
 
 ### 412
 
