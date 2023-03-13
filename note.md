@@ -2,6 +2,8 @@
 
 ## Index
 
+[21. Merge Two Sorted Lists](#21)
+
 [53. Maximum Subarray](#53)
 
 [121. Best Time to Buy and Sell Stock](#121)
@@ -27,6 +29,10 @@
 [1480. Running Sum of 1d Array](#1480)
 
 [1672. Richest Customer Wealth](#1672)
+
+### 21
+
+
 
 ### 53
 
