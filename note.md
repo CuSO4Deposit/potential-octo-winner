@@ -4,6 +4,8 @@
 
 [53. Maximum Subarray](#53)
 
+[121. Best Time to Buy and Sell Stock](#121)
+
 [205. Isomorphic Strings](#205)
 
 [217. Contains Duplicate](#217)
@@ -71,6 +73,10 @@ return ans;
 
 **Divide and Conquer**
 
+### 121
+
+Simple DP: Find array max, s.t. max[i] := max{a[j], j >= i}.
+
 ### 205
 
 hashmap.
@@ -118,8 +124,6 @@ I just fell again on this: Remember, always use `while(*ptr)` instead of `while(
 ### 392
 
 Try to imitate the `strcpy()` func style(x).
-
-
 
 ### 412
 
