@@ -10,6 +10,8 @@
 
 [205. Isomorphic Strings](#205)
 
+[206. Reverse Linked List](#206)
+
 [217. Contains Duplicate](#217)
 
 [322. Coin Change](#322)
@@ -31,8 +33,6 @@
 [1672. Richest Customer Wealth](#1672)
 
 ### 21
-
-
 
 ### 53
 
@@ -92,6 +92,10 @@ hashmap.
 2. No one character may map to two characters.
 
 Characters must form a one-to-one mapping. The simplest thought is to take 2 arrays to record the two maps (s -> t and t -> s).
+
+### 206
+
+This can be done in place, reverse the linked list as traversing it: repeatedly let the current node point to the previous node.
 
 ### 217
 
