@@ -8,6 +8,8 @@
 
 [121. Best Time to Buy and Sell Stock](#121)
 
+[142. Linked List Cycle II](#142)
+
 [205. Isomorphic Strings](#205)
 
 [206. Reverse Linked List](#206)
@@ -82,6 +84,12 @@ return ans;
 ### 121
 
 Simple DP: Find array max, s.t. max[i] := max{a[j], j >= i}.
+
+### 142
+
+Stuck on this problem the second time.
+
+https://blog.depoze.xyz/2023/04/Leetcode-142-Linked-List-Cycle-II/
 
 ### 205
 
