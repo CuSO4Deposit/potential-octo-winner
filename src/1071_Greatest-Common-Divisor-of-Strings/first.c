@@ -1,6 +1,8 @@
+// 3 ms (< 39.29%), 5.8 MB (< 60%)
+
 char * gcdOfStrings(char * str1, char * str2){
 	int maxcommon = 0;
-	for (int i = 1; i <= strlen(str1) / 2; i++){
+	for (int i = 1; i <= strlen(str1); i++){
 		if (strlen(str1) % i == 0 && strlen(str2) % i == 0){
 			int num = strlen(str1) / i;
 			int flag = 1;
@@ -23,8 +25,8 @@ char * gcdOfStrings(char * str1, char * str2){
 				if (flag == 0){
 					break;
 				}
-				for (int k = 1; k < num; k++){
-					if (str2[j + k * i] != str2[j]){
+				for (int k = 0; k < num; k++){
+					if (str2[j + k * i] != str1[j]){
 						flag = 0;
 					}
 				}
